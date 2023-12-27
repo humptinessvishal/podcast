@@ -17,15 +17,19 @@ const PodcastDetail = () => {
     const [playingFile, setPlayingFile] = useState("");
     const navigate = useNavigate();
 
-    
+
 
     useEffect(() => {
-        //Get Data of One Podcast
+        getData();
+    }, [id]);
+
+    //Get Data of One Podcast
     const getData = async () => {
         try {
             const docRef = doc(db, "podcasts", id);
             const docSnap = await getDoc(docRef);
             if (docSnap.exists()) {
+                console.log(docSnap.data());
                 setPodcast({ id: id, ...docSnap.data() });
             } else {
                 toast.error("No Such Podcast !");
@@ -35,10 +39,6 @@ const PodcastDetail = () => {
             toast.error(e.message);
         };
     };
-        return () => {
-            getData();
-        };
-    }, [id]);
 
     //Get data of Episodes
     useEffect(() => {
@@ -47,6 +47,7 @@ const PodcastDetail = () => {
             (querySnapshot) => {
                 const episodesData = [];
                 querySnapshot.forEach((doc) => {
+                    console.log(doc.data());
                     episodesData.push({ id: doc.id, ...doc.data() });
                 });
                 setEpisodes(episodesData);
@@ -57,7 +58,6 @@ const PodcastDetail = () => {
         );
 
         return () => {
-            // getData();
             unsubscribe();
         };
     }, [id]);
