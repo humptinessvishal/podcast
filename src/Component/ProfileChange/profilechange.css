@@ -1,0 +1,109 @@
+.profilechange {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    backdrop-filter: blur(2px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--purple-grey);
+}
+
+.profilechange div {
+    position: relative;
+    width: 50vw;
+    height: 60vh;
+    background-color: var(--white);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.profilechange div p{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: -3px;
+    right: -4px;
+    margin: 0;
+    background-color: var(--theme);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profilechange div button {
+    background-color: var(--theme);
+    color: var(--white);
+    border: 2px solid var(--purple-grey);
+    border-radius: 0.5rem;
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+    font-weight: 300;
+    width: 200px;
+}
+
+.profilechange div button:hover {
+    background-color: var(--white);
+    color: var(--theme);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.file {
+    background-color: var(--theme);
+    color: var(--white);
+    border: 2px solid var(--purple-grey);
+    border-radius: 0.5rem;
+    width: 200px;
+    padding: 0.7rem 0rem;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.file:focus {
+    outline: none;
+    border-color: var(--blue);
+}
+
+.file::placeholder {
+    color: var(--purple-grey);
+    font-size: 1.2rem;
+}
+
+.file:hover{
+    background-color: var(--white);
+    color: var(--theme);
+    transition: all 0.3s;
+    cursor: pointer;
+    border-color: var(--grey);
+}
+
+@media screen and (min-width: 340px) and (max-width: 450px) {
+    .profilechange div {
+        width: 70vw;
+        height: 60vh;
+    }
+}
+
+@media screen and (max-width: 339px) {
+    .profilechange div {
+        width: 80vw;
+        height: 60vh;
+    }
+
+    .profilechange div button {
+        width: 160px;
+    }
+
+    .file {
+        width: 160px;
+    }
+}

@@ -1,0 +1,134 @@
+.audio-player {
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(14, 2, 21, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 0rem;
+    height: 60px;
+    gap: 1rem;
+}
+
+.player-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.audio-player button {
+    border: none;
+    background-color: transparent;
+    color: var(--white);
+    font-size: 1.2rem;
+}
+
+.time-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60vw;
+    padding: 0.5rem 0rem;
+}
+
+.duration-bar {
+    filter: hue-rotate(25deg);
+    width: 60%;
+}
+
+.current-time,
+.remaining-time {
+    font-size: 1rem;
+}
+
+.sound-bar {
+    width: 8vw;
+}
+
+@media screen and (min-width: 450px) and (max-width: 649px) {
+    .audio-player {
+        gap: 0.3rem;
+    }
+}
+
+@media screen and (min-width: 380px) and (max-width: 449px) {
+    .audio-player {
+        gap: 0rem;
+    }
+
+    .audio-player button {
+        font-size: 1rem;
+    }
+
+    .duration-bar {
+        width: 40%;
+    }
+
+    .current-time,
+    .remaining-time {
+        font-size: 0.9rem;
+    }
+
+    .sound-bar {
+        width: 10vw;
+    }
+}
+
+@media screen and (min-width: 321px) and (max-width: 379px) {
+    .audio-player {
+        gap: 0.2rem;
+    }
+
+    .player-image {
+        width: 30px;
+        height: 30px;
+    }
+
+    .audio-player button {
+        font-size: 1rem;
+    }
+
+    .duration-bar {
+        width: 40%;
+    }
+
+    .current-time,
+    .remaining-time {
+        font-size: 0.7rem;
+    }
+
+    .sound-bar {
+        width: 10vw;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .audio-player {
+        gap: 0.1rem;
+    }
+
+    .player-image {
+        width: 30px;
+        height: 30px;
+    }
+
+    .audio-player button {
+        font-size: 0.9rem;
+    }
+
+    .duration-bar {
+        width: 35%;
+    }
+
+    .current-time,
+    .remaining-time {
+        font-size: 0.7rem;
+    }
+
+    .sound-bar {
+        width: 12vw;
+    }
+}
