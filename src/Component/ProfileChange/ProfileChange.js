@@ -50,8 +50,8 @@ const ProfileChange = ({ handleFlag, setLoading, user }) => {
         <div className='profilechange'>
             <div>
                 <p onClick={() => handleFlag()}><ImCross /></p>
-                <FileInput className={"file"} fileHandle={imageFileHandle} accept={"image/*"} id={"user-image"} labelname={"Upload Image File *"} />
-                <button onClick={handleProfileChange}>Profile Edit</button>
+                <FileInput className={"file"} fileHandle={imageFileHandle} accept={"image/*"} id={"user-image"} labelname={"Upload Profile Image *"} />
+                <button onClick={handleProfileChange}>Submit</button>
                 <LogOut/>
             </div>
         </div>
