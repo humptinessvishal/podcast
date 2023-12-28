@@ -15,7 +15,7 @@ const SignUpPage = () => {
 
     useEffect(() => {
         if (user) {
-            navigate("/profile")
+            navigate("/profile");
         };
     }, [user]);
 
